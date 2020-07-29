@@ -9,7 +9,7 @@ FROM busybox:latest
 WORKDIR /bareos_exporter
 COPY --from=builder /go/src/github.com/vierbergenlars/bareos_exporter/bareos_exporter bareos_exporter
 
-ENV DSN
+ENV DSN mysql://user:password@host/db
 
 ENTRYPOINT ["./bareos_exporter -dns $DSN"]
 EXPOSE 9625

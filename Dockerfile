@@ -11,5 +11,5 @@ COPY --from=builder /go/src/github.com/vierbergenlars/bareos_exporter/bareos_exp
 
 ENV DSN=
 
-ENTRYPOINT ./bareos_exporter -dns $DSN
+ENTRYPOINT ./bareos_exporter -dsn $DSN
 EXPOSE 9625
